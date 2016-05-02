@@ -2,6 +2,8 @@
 #
 # Install Pomander as a pre-commit hook
 
+set -e
+
 git rev-parse --is-inside-work-tree &> /dev/null
 if [[ "$?" > 0 ]]; then
   echo "Pomander install failed: Not a git repository"
@@ -12,7 +14,7 @@ ROOT_DIR=$(git rev-parse --show-toplevel)
 
 cd "$ROOT_DIR/.git/hooks"
 rm -f pre-commit
-curl -s https://raw.githubusercontent.com/hackreactor-labs/pomander/master/bin/pomander > pre-commit
+curl -sS https://raw.githubusercontent.com/hackreactor-labs/pomander/master/bin/pomander > pre-commit
 chmod +x pre-commit
 echo "Pomander installed successfully."
 exit 0
