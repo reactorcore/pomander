@@ -9,7 +9,7 @@ You need a working copy of npm, the package manager that comes bundled with [Nod
 Using npm, install ESLint:
 
 ```
-npm install -g eslint
+npm install -g eslint@6.8.0
 ```
 
 ## Installation
