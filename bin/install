@@ -14,7 +14,7 @@ ROOT_DIR=$(git rev-parse --show-toplevel)
 
 cd "$ROOT_DIR/.git/hooks"
 rm -f pre-commit
-curl -sS https://raw.githubusercontent.com/hackreactor-labs/pomander/master/bin/pomander > pre-commit
+curl -sS https://raw.githubusercontent.com/reactorcore/pomander/master/bin/pomander > pre-commit
 chmod +x pre-commit
 echo "Pomander installed successfully."
 exit 0
